@@ -1,0 +1,45 @@
+{
+  "timeZone": "Asia/Kolkata",
+  "dependencies": {
+    "enabledAdvancedServices": [
+      {
+        "userSymbol": "Calendar",
+        "version": "v3",
+        "serviceId": "calendar"
+      }
+    ]
+  },
+  "exceptionLogging": "STACKDRIVER",
+  "oauthScopes": [
+    "https://www.googleapis.com/auth/calendar.addons.execute",
+    "https://www.googleapis.com/auth/calendar.readonly",
+    "https://www.googleapis.com/auth/drive.addons.metadata.readonly",
+    "https://www.googleapis.com/auth/gmail.addons.current.action.compose",
+    "https://www.googleapis.com/auth/gmail.addons.current.message.readonly",
+    "https://www.googleapis.com/auth/gmail.addons.execute",
+    "https://www.googleapis.com/auth/script.locale"
+  ],
+  "runtimeVersion": "DEPRECATED_ES5",
+  "addOns": {
+    "common": {
+      "name": "DailyGet",
+      "logoUrl": "https://lh3.googleusercontent.com/pw/AM-JKLUAc5MHebp-vGrhQmFzumuTOhHbgMGKhoozLhuikFP6UBfMqvUu_3XgM5169YSlJOvw-ecmZheCLyIlmftpkYPIjcJTUnKWgBIvNO_uBdBkmA_NxCstQDVNtndtYCcxY95oz_IZX2jFktxr8wrh6TPrYg=s512-no?authuser=0",
+      "useLocaleFromApp": true,
+      "homepageTrigger": {
+        "runFunction": "onHomepage",
+        "enabled": true
+      },
+      "universalActions": [
+        {
+          "label": "Learn more about Cataas",
+          "openLink": "https://cataas.com"
+        }
+      ]
+    },
+    "calendar": {
+      "eventOpenTrigger": {
+        "runFunction": "onCalendarEventOpen"
+      }
+    }
+  }
+}
